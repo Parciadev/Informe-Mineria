@@ -23,6 +23,11 @@ datos.fillna(datos.median(), inplace=True)
 X = datos.drop('incumplimiento', axis=1)  # Variables independientes
 y = datos['incumplimiento']  # Variable dependiente
 
+print("Variables independientes (X):")
+print(X.head())
+print("\nVariable dependiente (y):")
+print(y.head())
+
 # División del Conjunto de Datos en Entrenamiento y Prueba
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
